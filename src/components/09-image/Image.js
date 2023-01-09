@@ -13,7 +13,6 @@ const Image = () => {
         <img src={northernLights} alt="" width="300"/>
 
         <img src={require("../../assets/img/image2.jpg")} alt="" width="300" />
-   
     </div>
   )
 }
