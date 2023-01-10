@@ -16,6 +16,10 @@ import Clock2 from "./components/08-clock2/Clock2";
 import Gallery from "./components/09-image/Gallery";
 import Image from "./components/09-image/Image";
 import ProfileCard from "./components/10-profile-card/ProfileCard";
+import BootstrapDynamic from "./components/11-bootstrap/bootstrap-dynamic";
+import Icon from "./components/12-icons/Icon";
+import Events from "./components/13-events/Events";
+import Shop from "./components/14-products/Shop";
 
 const App = () => {
   return(
@@ -35,14 +39,16 @@ const App = () => {
         <Greetings/>
         <Products/>
         <Clock2 textColor="#56ff33" bgColor="#0012C3"/>
-      <Image/>
-<Gallery/>
+        <Image/>
+        <Gallery/>
+        <ProfileCard avatar="profile.jpg" name="Ali Gel" location="Turkey" shoot="25" followers="20" following="15"/>
+        <BootstrapDynamic/>
+        <Icon/>
+    <Events/>
 */}
+      <Shop/>
       
-      
-      <ProfileCard avatar="profile.jpg" name="Ali Gel" location="Turkey" shoot="25" followers="20" following="15"/>
         
-
     </div>
   )
 };
