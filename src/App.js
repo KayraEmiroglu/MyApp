@@ -40,7 +40,7 @@ const App = () => {
 */}
       
       
-      <ProfileCard/>
+      <ProfileCard avatar="profile.jpg" name="Ali Gel" location="Turkey" shoot="25" followers="20" following="15"/>
         
 
     </div>
