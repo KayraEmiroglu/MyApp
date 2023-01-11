@@ -5,6 +5,7 @@ import Jsx3 from "./components/03-jsx/jsx3";
 import Jsx4 from "./components/03-jsx/jsx4";
 import Jsx5 from "./components/03-jsx/jsx5";
 import Jsx6 from "./components/03-jsx/jsx6";
+import Jsx7 from "./components/03-jsx/jsx7";
 import Style1 from "./components/04-styles/Style1";
 import Style2 from "./components/04-styles/Style2";
 import Style3 from "./components/04-styles/Style3";
@@ -20,6 +21,8 @@ import BootstrapDynamic from "./components/11-bootstrap/bootstrap-dynamic";
 import Icon from "./components/12-icons/Icon";
 import Events from "./components/13-events/Events";
 import Shop from "./components/14-products/Shop";
+import State from "./components/15-useState/State";
+import Stateless from "./components/15-useState/Stateless";
 
 const App = () => {
   return(
@@ -45,9 +48,12 @@ const App = () => {
         <BootstrapDynamic/>
         <Icon/>
     <Events/>
+    <Shop/>
+     <Jsx7/>
+     <Stateless/>
 */}
-      <Shop/>
       
+     <State/>
         
     </div>
   )
