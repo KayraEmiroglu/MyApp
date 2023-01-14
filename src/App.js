@@ -25,6 +25,10 @@ import State from "./components/15-useState/State";
 import Stateless from "./components/15-useState/Stateless";
 import Counter from "./components/16-counter/Counter";
 import Birthday from "./components/17-birthday/Birthday";
+import UseEffect from "./components/18-useeffect/UseEffect1";
+import UseEffect2 from "./components/18-useeffect/UseEffect2";
+import Clock3 from "./components/19-clock3/Clock3";
+import CountryFilter from "./components/20-country-filter/CountryFilter";
 
 const App = () => {
   return(
@@ -55,12 +59,13 @@ const App = () => {
      <Stateless/>
      <State/>
          <Counter/>
-    <Birthday/>
-
-
+    <UseEffect1/>
+<Clock3/>
+<UseEffect2/>
 */}
       
-        
+        <CountryFilter/>
+
     </div>
   )
 };
