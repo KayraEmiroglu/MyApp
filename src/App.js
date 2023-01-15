@@ -29,6 +29,8 @@ import UseEffect from "./components/18-useeffect/UseEffect1";
 import UseEffect2 from "./components/18-useeffect/UseEffect2";
 import Clock3 from "./components/19-clock3/Clock3";
 import CountryFilter from "./components/20-country-filter/CountryFilter";
+import UserCards from "./components/23-fetch-users/UserCards";
+import Countries from "./components/24-axios-countries/Countries";
 
 const App = () => {
   return(
@@ -62,10 +64,14 @@ const App = () => {
     <UseEffect1/>
 <Clock3/>
 <UseEffect2/>
+        <CountryFilter/>
+<UserCards/>
 */}
       
-        <CountryFilter/>
 
+    <Countries/>
+    
+    
     </div>
   )
 };
