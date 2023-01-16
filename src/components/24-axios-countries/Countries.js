@@ -1,20 +1,31 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Table } from 'react-bootstrap'
+import { Spinner, Table } from 'react-bootstrap'
+import Country from './Country';
 
 const Countries = () => {
     const [countries, setCountries] = useState([]);
     const [loading, setLoading] = useState(true);
 
     const loadData = async () => {
-        const resp = await axios.get("https://restcountries.com/v3.1/all");   
-        setCountries(resp.data)
-    }
+      try {
+        const resp = await axios.get("https://restcountries.com/v3.1/all");
+        setCountries(resp.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
     useEffect(() => {
-        loadData();    
-    }, [])
-    
+      const timeoutId = setTimeout(() => {
+        loadData().catch((err) => {
+          console.log(err);
+        }).finally(() => {
+          setLoading(false);
+        });
+      }, 5000);
+      return () => clearTimeout(timeoutId);
+    }, []);
 
   return (
     <Table striped bordered hover>
@@ -27,19 +38,20 @@ const Countries = () => {
         <th>Baskent</th>
       </tr>
     </thead>
-    <tbody>
-    {countries.map(i=>{
-        
-      <tr>
-        <td>{i}</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-    })}
-    
+    <tbody >
       
+     <tr>
+      <td colSpan="5">
+        {loading && <Spinner animation="border" variant="primary"/>} 
+      </td>
+    </tr>
+    {countries.map((ulke,i)=>(
+      <tr key={i}>
+        <Country {...ulke}/>
+      </tr>
+    ))}
+    
+
     </tbody>
   </Table>
   )

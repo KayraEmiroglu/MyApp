@@ -29,6 +29,9 @@ import UseEffect from "./components/18-useeffect/UseEffect1";
 import UseEffect2 from "./components/18-useeffect/UseEffect2";
 import Clock3 from "./components/19-clock3/Clock3";
 import CountryFilter from "./components/20-country-filter/CountryFilter";
+import Scroll from "./components/21-useRef/Scroll";
+import UseRef from "./components/21-useRef/UseRef";
+import ClassComp from "./components/22-class-type-component/ClassComp";
 import UserCards from "./components/23-fetch-users/UserCards";
 import Countries from "./components/24-axios-countries/Countries";
 
@@ -66,10 +69,14 @@ const App = () => {
 <UseEffect2/>
         <CountryFilter/>
 <UserCards/>
+<UseRef/>
+<Scroll/>
+<ClassComp/>
+
 */}
       
-
-    <Countries/>
+      <Countries/>
+    
     
     
     </div>
