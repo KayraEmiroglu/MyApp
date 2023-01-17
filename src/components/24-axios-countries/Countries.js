@@ -10,7 +10,20 @@ const Countries = () => {
     const loadData = async () => {
       try {
         const resp = await axios.get("https://restcountries.com/v3.1/all");
-        setCountries(resp.data);
+
+        
+
+        const arr = resp.data.map((item)=>({
+            ccn3: item.ccn3,
+            flag: item.flags.png,
+            name: item.name.common,
+            population: item.population,
+            capital: item.capital?.join("-"),
+            currencies: item.currencies ? Object.keys(item.currencies).map(cur=>item.currencies[cur].name).join(`-`) : ""
+          
+        }))
+
+        setCountries(arr);
       } catch (error) {
         console.error(error);
       }
@@ -36,6 +49,7 @@ const Countries = () => {
         <th>Ülke</th>
         <th>Nüfus</th>
         <th>Baskent</th>
+        <th>Para Birimi</th>
       </tr>
     </thead>
     <tbody >
@@ -47,7 +61,7 @@ const Countries = () => {
     </tr>
     {countries.map((ulke,i)=>(
       <tr key={i}>
-        <Country {...ulke}/>
+        <Country {...ulke} />
       </tr>
     ))}
     
