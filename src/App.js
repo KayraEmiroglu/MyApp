@@ -39,6 +39,8 @@ import Form1 from "./components/26-forms/Form1";
 import Form2 from "./components/26-forms/Form2";
 import Form3 from "./components/26-forms/Form3";
 import Form4 from "./components/26-forms/Form4";
+import Form5 from "./components/26-forms/Form5";
+import Form6 from "./components/26-forms/Form6";
 
 const App = () => {
   return(
@@ -83,10 +85,14 @@ const App = () => {
 <Form2/>
   
     <Form3/>
+    <Form4/>
+
+<Form5/>
+
 */}
       
-    <Form4/>
     
+    <Form6/>
     
     </div>
   )
